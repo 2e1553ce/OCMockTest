@@ -31,10 +31,10 @@
 
 - (void)testUpperCaseString {
     id tesObject = OCMClassMock([PYOHTTPSessionManager class]);
-    // set it up to return a specific value when stringForKey: is called
-    OCMStub([tesObject upperCaseString:@"MyAppURLKey"]).andReturn(@"rrRR");
-    NSString *testString = [tesObject upperCaseString:@"MyAppURLKey"];
-    XCTAssertEqualObjects(testString, @"rrRR");
+    OCMStub([tesObject upperCaseString:@"LetsTest"]).andReturn(@"Test");
+    
+    NSString *testString = [tesObject upperCaseString:@"LetsTest"];
+    XCTAssertEqualObjects(testString, @"Test");
 }
 
 /*
